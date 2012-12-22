@@ -14,6 +14,10 @@ syntax on
 set smartindent
 set tabstop=4
 set shiftwidth=4
+set nu
+
+"linerhi
+hi LineNr          ctermfg=250 ctermbg=234
 
 "set expandtab
 if has("autocmd")
@@ -53,3 +57,7 @@ nnoremap / :M/
 nnoremap ? :M?
 nnoremap ,/ /
 nnoremap ,? ?
+
+"colorscheme
+set t_Co=256
+"colorscheme molokai 
