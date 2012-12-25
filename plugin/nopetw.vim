@@ -146,6 +146,10 @@ function! OLDNOPETW()
 		exe "%!uniq"
 		exe "%s/\r//g"
 	catch
+	try
+		exe "set ff=unix"
+	catch
+	endtry
 	endtry
 		normal gg
 endfunction
