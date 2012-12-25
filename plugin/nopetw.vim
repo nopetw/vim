@@ -146,6 +146,7 @@ function! OLDNOPETW()
 		exe "%!uniq"
 		exe "%s/\r//g"
 	catch
+	"轉為unix?
 	try
 		exe "set ff=unix"
 	catch
