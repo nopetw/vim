@@ -1,3 +1,4 @@
+"Sun 12 30 01:04:09 CST 2012
 function! NOPETW()
 	exe "set ff=unix"
 	try
