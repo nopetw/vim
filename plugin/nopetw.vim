@@ -28,6 +28,7 @@ function! MYMAP()
 	exe 'map gc :s/\\part{\\|\\chapter{\\|\\section{\\|\\subsection{\\|\\subsubsection{\\|paragraph{//<CR> :s/}$//<CR>'
 endfunction
 function! NOPETW()
+	exe "set ff=unix"
 	try
 		exe "%s/^[ \t]*//"
 		catch
@@ -147,10 +148,7 @@ function! OLDNOPETW()
 		exe "%s/\r//g"
 	catch
 	"轉為unix?
-	try
-		exe "set ff=unix"
-	catch
 	endtry
-	endtry
-		normal gg
+	exe "set ff=unix"
+	normal gg
 endfunction
