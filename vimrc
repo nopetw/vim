@@ -60,7 +60,7 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 	"搭配 mouseterm
 	"https://bitheap.org/mouseterm/
 if has("mouse")
-	"set mouse=a
+	set mouse=a
 endif
 
 	"epub and vim
