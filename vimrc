@@ -15,6 +15,7 @@ set bs=2			"INSERT中，可過行刪除
 set nu				"左側顯示行數
 set incsearch		"快速顯示搜尋字串
 syntax on			"語法上色
+filetype plugin on	"enable plugin
 
 	"disable
 "set expandtab		"把<TAB>變成空白鍵
@@ -59,7 +60,7 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 	"搭配 mouseterm
 	"https://bitheap.org/mouseterm/
 if has("mouse")
-	set mouse=a
+	"set mouse=a
 endif
 
 	"epub and vim
