@@ -5,7 +5,6 @@ set fileencodings=utf-8,big5,gb2312,
 set ffs=unix,dos
 
 "一般設定
-set nocompatible
 set autoindent		"自動縮排
 set smartindent		"自動處理縮排
 set smarttab		"對應expandtab
