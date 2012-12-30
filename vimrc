@@ -54,6 +54,7 @@ nnoremap ,/ /
 nnoremap ,? ?
 
 "mac＆其他設定
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags' 
 	"解決mac's terminal.app無法正確使用滑鼠的問題
 	"搭配 mouseterm
 	"https://bitheap.org/mouseterm/
@@ -77,3 +78,5 @@ endif
 	"tab
 map <C-t><C-t> :tabnew<CR>
 map <C-t><C-w> :tabclose<CR> 
+	"ctags with tagbar
+nmap <F8> :TagbarToggle<CR>
