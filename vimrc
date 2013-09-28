@@ -1,7 +1,7 @@
 "日 12 30 22:58:20 CST 2012
 "編碼
 set encoding=utf-8
-set fileencodings=utf-8,big5,gb2312,
+set fileencodings=utf-8,big5,gb2312,utf-16le
 set ffs=unix,dos
 
 "一般設定
@@ -16,7 +16,11 @@ set nu				"左側顯示行數
 set incsearch		"快速顯示搜尋字串
 syntax on			"語法上色
 filetype plugin on	"enable plugin
-
+	
+	"copy to clipboard in visul mode
+	"http://vim.wikia.com/wiki/In_line_copy_and_paste_to_system_clipboard
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 	"disable
 "set expandtab		"把<TAB>變成空白鍵
 
@@ -65,6 +69,10 @@ endif
 
 	"epub and vim
 au BufReadCmd   *.epub      call zip#Browse(expand("<amatch>"))
+	" MS Word document reading
+au BufReadPre *.doc set ro
+au BufReadPre *.doc set hlsearch!
+au BufReadPost *.doc %!antiword "%"
 	"auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd! bufwritepost vimrc source ~/.vimrc
