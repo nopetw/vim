@@ -755,12 +755,6 @@ function! NOPETW()
 	cat|endt
 	try|sil exe 'sort /^\d\{-}{/'
 	cat|endt
-"移除重複章節名稱
-	ec '移除重複章節名稱'
-	sil exe ':let i=1|g/^/s//\=i."{"/|let i+=1'
-	sil exe 'g/\%(^\d\{-}{第\1$\n\)\@<=\d\{-}{第\(.*\)$/d'
-	sil exe 'sort n'
-	sil exe '%s/\d\{-}{//'
 "收尾
 	ec '收尾'
 	try|sil exe '%s/[{(\[【][}\])】]//g'
@@ -773,6 +767,12 @@ function! NOPETW()
 	cat|endt
 	try|sil exe 'g/^[　| |\t]*$/d'
 	cat|endt
+"移除重複章節名稱
+	ec '移除重複章節名稱'
+	sil exe ':let i=1|g/^/s//\=i."{"/|let i+=1'
+	sil exe 'g/\%(^\d\{-}{第\1$\n\)\@<=\d\{-}{第\(.*\)$/d'
+	sil exe 'sort n'
+	sil exe '%s/\d\{-}{//'
 	norm gg
 	sil exe 'w'
 	sil exe 'redraw!'
