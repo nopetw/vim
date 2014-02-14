@@ -47,14 +47,9 @@ highlight User4 term=underline cterm=underline ctermfg=white
 highlight User5 ctermfg=cyan
 highlight User6 ctermfg=white
 
-"Plugin
-	"plugin管理 pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
 	"eregex.vim
-nnoremap / :M/
-nnoremap ? :M?
+"nnoremap / :M/
+"nnoremap ? :M?
 nnoremap ,/ /
 nnoremap ,? ?
 
@@ -89,3 +84,29 @@ map <C-t><C-t> :tabnew<CR>
 map <C-t><C-w> :tabclose<CR> 
 	"ctags with tagbar
 nmap <F8> :TagbarToggle<CR>
+
+
+	"Vundle
+set nocompatible
+filetype off
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let iCanHazVundle=0
+endif
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+	"Bundle List
+Bundle 'FencView.vim'
+Bundle 'bash-support.vim'
+Bundle 'taglist.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'gmarik/vundle'
+Bundle 'majutsushi/tagbar'
+Bundle 'othree/eregex.vim'
+
+filetype plugin indent on
