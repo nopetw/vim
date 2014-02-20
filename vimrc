@@ -1,7 +1,7 @@
-"日 12 30 22:58:20 CST 2012
+"2014年 2月18日 周二 16時11分27秒 CST
 "編碼
 set encoding=utf-8
-set fileencodings=utf-8,big5,gb2312,utf-16le
+set fileencodings=utf-8,big5,gb2312
 set ffs=unix,dos
 
 "一般設定
@@ -68,7 +68,6 @@ map <C-t><C-w> :tabclose<CR>
 	"ctags with tagbar
 nmap <F8> :TagbarToggle<CR>
 
-
 	"Vundle
 set nocompatible
 filetype off
@@ -87,10 +86,11 @@ call vundle#rc()
 Bundle 'FencView.vim'
 Bundle 'bash-support.vim'
 Bundle 'taglist.vim'
-"Bundle 'Lokaltog/vim-powerline'
-"Bundle 'bling/vim-airline'
+Bundle 'Raimondi/delimitMate'
 Bundle 'gmarik/vundle'
 Bundle 'majutsushi/tagbar'
 Bundle 'othree/eregex.vim'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on

@@ -1,4 +1,4 @@
-"2014年 2月 9日 周日 07時10分39秒 CST
+" 2014年 2月 9日 周日 07時10分39秒 CST
 command NOPETW exe ':sil call NOPETW()'
 \ | exe ':redr!'
 function! NOPETW()
@@ -12,15 +12,15 @@ function! NOPETW()
 	try|sil exe '%s/[ \t]*$//'
 	cat|endt
 	ec '同行章節斷行'
-"	try|sil exe 'g/第.*[篇部卷集].*第.*[章回節]/s/\\(.*\\)\\(第\\)\\(.*\\)\\([篇部章回卷集]\\)\\(.*\\)/\\1\r\\2\\3\\4\\5/'
+	" try|sil exe 'g/第.*[篇部卷集].*第.*[章回節]/s/\\(.*\\)\\(第\\)\\(.*\\)\\([篇部章回卷集]\\)\\(.*\\)/\\1\r\\2\\3\\4\\5/'
 "	cat|endt
 	try|sil exe 'g/第.*[篇部卷集].*第.*[章回節]/s/\(.*\)\(第\)\(.*\)\([篇部章回卷集]\)\(.*\)/\1\r\2\3\4\5/'
-	cat|endt
-"	try|sil exe '%!uniq'
-"	cat|endt
-"	try|sil exe 'g/^$/d'
-"	cat|endt
-"格式整理
+	" cat|endt
+	" try|sil exe '%!uniq'
+	" cat|endt
+	" try|sil exe 'g/^$/d'
+	" cat|endt
+" 格式整理
 	ec '格式整理'
 	try|sil exe '%s/[圞垩堊卝龘]//g'
 	cat|endt
@@ -58,7 +58,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/搜索最新更新盡在[a-z]*//'
 	cat|endt
-"星號屏蔽字還原
+" 星號屏蔽字還原
 	ec '星號屏蔽字還原'
 	try|sil exe '%s/十有\*\{2\}/十有八九/g'
 	cat|endt
@@ -78,7 +78,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/赤身\*\{2\}/赤身裸體/g'
 	cat|endt
-"多字替換
+" 多字替換
 	ec '多字替換'
 	try|sil exe '%s/曖me[iì]/曖昧/g'
 	cat|endt
@@ -110,7 +110,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/d[iì]f[āa]ng/地方/g'
 	cat|endt
-	try|sil exe '%s/d[ìi]d[ūu]/帝都/g'
+	try|sil exe '%s/d[ìi]\s\{0,2\}d[ūu]/帝都/g'
 	cat|endt
 	try|sil exe '%s/di國/帝國/g'
 	cat|endt
@@ -236,10 +236,10 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/ru白色/乳白色/g'
 	cat|endt
-"	try|sil exe '%s/rén員/人員/g'
-"	cat|endt
-"	try|sil exe '%s/rén形/人形/g'
-"	cat|endt
+	" try|sil exe '%s/rén員/人員/g'
+	" cat|endt
+	" try|sil exe '%s/rén形/人形/g'
+	" cat|endt
 	try|sil exe '%s/sh[iì]ji[eè]/世界/g'
 	cat|endt
 	try|sil exe '%s/sh[ií]ji[aā]n/時間/g'
@@ -254,8 +254,8 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/shu女/熟女/g'
 	cat|endt
-"	try|sil exe '%s/上chuang/上床/g'
-"	cat|endt
+	" try|sil exe '%s/上chuang/上床/g'
+	" cat|endt
 	try|sil exe '%s/呻y[íi]n/呻吟/g'
 	cat|endt
 	try|sil exe '%s/sh[ēe]ngzh[íi]/生殖/g'
@@ -306,12 +306,12 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/陽w[ěe]i/陽痿/g'
 	cat|endt
-	try|sil exe '%s/[yao|搖][tou|頭]/搖頭/g'
+	try|sil exe '%s/yaotou/搖頭/g'
 	cat|endt
-"	try|sil exe '%s/yao頭/搖頭/g'
-"	cat|endt
-"	try|sil exe '%s/搖tou/搖頭/g'
-"	cat|endt
+	try|sil exe '%s/yao頭/搖頭/g'
+	cat|endt
+	try|sil exe '%s/搖tou/搖頭/g'
+	cat|endt
 	try|sil exe '%s/yezhan/野戰/g'
 	cat|endt
 	try|sil exe '%s/you餌/誘餌/g'
@@ -386,7 +386,7 @@ function! NOPETW()
 	try|sil exe '%s/<BR>/\r/'
 		sil exe '%s/<\/font>//'
 	cat|endt
-"單字替換
+" 單字替換
 	ec '單字替換'
 	try|sil exe '%s/b[āà]ng/棒/g'
 	cat|endt
@@ -676,11 +676,11 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/獃/呆/g'
 	cat|endt
-"特殊字符
+" 特殊字符
 	ec '特殊字符'
 	try|sil exe '%s/&#183;/·/g'
 	cat|endt
-"誤替還原
+" 誤替還原
 	ec '誤替還原'
 	try|sil exe '%s/碧欲/碧玉/g'
 	cat|endt
@@ -700,7 +700,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/波SS/BOSS/g'
 	cat|endt
-"其他修正
+" 其他修正
 	ec '其他修正'
 	try|sil exe '%s/n吧/nba/g'
 	cat|endt
@@ -708,7 +708,9 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/伱/你/g'
 	cat|endt
-"特殊關鍵字
+	try|sil exe '%s/獃/呆/g'
+	cat|endt
+ " 特殊關鍵字
 	ec '特殊關鍵字'
 	try|sil exe '%s/[\[［][A-z|\.]\{3,\}[^\]]*[\]］]//g'
 	cat|endt
@@ -755,7 +757,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe 'sort /^\d\{-}{/'
 	cat|endt
-"收尾
+" 收尾
 	ec '收尾'
 	try|sil exe '%s/[{(\[【][}\])】]//g'
 	cat|endt
@@ -767,7 +769,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe 'g/^[　| |\t]*$/d'
 	cat|endt
-"移除重複章節名稱
+" 移除重複章節名稱
 	ec '移除重複章節名稱'
 	sil exe ':let i=1|g/^/s//\=i."{"/|let i+=1'
 	sil exe 'g/\%(^\d\{-}{第\1$\n\)\@<=\d\{-}{第\(.*\)$/d'
