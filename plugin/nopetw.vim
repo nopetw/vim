@@ -15,9 +15,7 @@ function! NOPETW()
 	" try|sil exe 'g/第.*[篇部卷集].*第.*[章回節]/s/\\(.*\\)\\(第\\)\\(.*\\)\\([篇部章回卷集]\\)\\(.*\\)/\\1\r\\2\\3\\4\\5/'
 "	cat|endt
 	try|sil exe 'g/第.*[篇部卷集].*第.*[章回節]/s/\(.*\)\(第\)\(.*\)\([篇部章回卷集]\)\(.*\)/\1\r\2\3\4\5/'
-	" cat|endt
-	" try|sil exe '%!uniq'
-	" cat|endt
+	cat|endt
 	" try|sil exe 'g/^$/d'
 	" cat|endt
 " 格式整理
@@ -771,6 +769,8 @@ function! NOPETW()
 	cat|endt
 " 移除重複章節名稱
 	ec '移除重複章節名稱'
+	" try|sil exe '%!uniq'
+	" cat|endt
 	sil exe ':let i=1|g/^/s//\=i."{"/|let i+=1'
 	sil exe 'g/\%(^\d\{-}{第\1$\n\)\@<=\d\{-}{第\(.*\)$/d'
 	sil exe 'sort n'
