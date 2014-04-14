@@ -20,7 +20,7 @@ function! NOPETW()
 	" cat|endt
 " 格式整理
 	ec '格式整理'
-	try|sil exe '%s/[圞垩堊卝龘]//g'
+	try|sil exe '%s/[冇圞垩堊卝龘]//g'
 	cat|endt
 	try|sil exe '%s/,/，/g'
 	cat|endt
@@ -80,7 +80,7 @@ function! NOPETW()
 	ec '多字替換'
 	try|sil exe '%s/曖me[iì]/曖昧/g'
 	cat|endt
-	try|sil exe '%s/b[ěe]i[\\s|&nbsp;]*j[īi]ng/北京/g'
+	try|sil exe '%s/b[ěe]i\ *j[īi]ng/北京/g'
 	cat|endt
 	try|sil exe '%s/半shen/半身/g'
 	cat|endt
@@ -102,17 +102,17 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/diao絲/屌絲/g'
 	cat|endt
-	try|sil exe '%s/d[úu][?:\\s|<br/>]*l[ìi]/獨立/g'
+	try|sil exe '%s/d[úu]\ *l[ìi]/獨立/g'
 	cat|endt
 	try|sil exe '%s/dú *cái/獨裁/g'
 	cat|endt
 	try|sil exe '%s/d[iì]f[āa]ng/地方/g'
 	cat|endt
-	try|sil exe '%s/d[ìi]\s\{0,2\}d[ūu]/帝都/g'
+	try|sil exe '%s/d[ìi]\ \{0,2\}d[ūu]/帝都/g'
 	cat|endt
 	try|sil exe '%s/di國/帝國/g'
 	cat|endt
-	try|sil exe '%s/du\s\{0,2\}c[áa]i/獨裁/g'
+	try|sil exe '%s/du\ \{0,2\}c[áa]i/獨裁/g'
 	cat|endt
 	try|sil exe '%s/f[ǎa]ngf[óo]/彷彿/g'
 	cat|endt
@@ -204,19 +204,17 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/mi茫/迷茫/g'
 	cat|endt
-	try|sil exe '%s/m[íi]n\s\{0,2\}zh[ǔu]/民主/g'
+	try|sil exe '%s/m[íi]n\ \{0,2\}zh[ǔu]/民主/g'
 	cat|endt
 	try|sil exe '%s/迷jian/迷奸/g'
 	cat|endt
 	try|sil exe '%s/mimi糊糊/迷迷糊糊/g'
 	cat|endt
-	try|sil exe '%s/末[?:\\s|<br/?>]*ì/末日/g'
-	cat|endt
 	try|sil exe '%s/n[àa]me/那麼/g'
 	cat|endt
 	try|sil exe '%s/n[ée]ngg[oò]u/能夠/g'
 	cat|endt
-	try|sil exe '%s/nán\s\{0,2\}hǎi/那會/g'
+	try|sil exe '%s/nán\ \{0,2\}hǎi/那會/g'
 	cat|endt
 	try|sil exe '%s/pi[áa]o客/嫖客/g'
 	cat|endt
@@ -330,7 +328,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/z[iì]j[iǐ]/自己/g'
 	cat|endt
-	try|sil exe '%s/z[ìi][?:\\s|<br/?>]*y[oó]u/自由/g'
+	try|sil exe '%s/z[ìi][?:\\ |<br/?>]*y[oó]u/自由/g'
 	cat|endt
 	try|sil exe '%s/zh[iī]d?[àa]u?o/知道/g'
 	cat|endt
@@ -340,13 +338,13 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/政f[ǔu]/政府/g'
 	cat|endt
-	try|sil exe '%s/zh[èe]ng\s\{0,2\}f[uǔ]/政府/g'
+	try|sil exe '%s/zh[èe]ng\ \{0,2\}f[uǔ]/政府/g'
 	cat|endt
 	try|sil exe '%s/zong理/總理/g'
 	cat|endt
 	try|sil exe '%s/zh[ōo]ngy[āa]ng/中央/g'
 	cat|endt
-	try|sil exe '%s/中\s*yang/中央/g'
+	try|sil exe '%s/中\ *yang/中央/g'
 	cat|endt
 	try|sil exe '%s/zu[oǒ]y[oò]u/左右/g'
 	cat|endt
@@ -360,7 +358,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/政zhi局/政治局/g'
 	cat|endt
-	try|sil exe '%s/\(昨|一|時|余\)[?:<br/?>|&nbsp;|\\s]*ì/\1日/g'
+	try|sil exe '%s/\(昨|一|時|余\)[?:<br/?>|&nbsp;|\\ ]*ì/\1日/g'
 	cat|endt
 
 	try|sil exe '%s/[wW]\{3\}.//g'
@@ -562,7 +560,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/\([^a-z]\)ri/\1日/g'
 	cat|endt
-	try|sil exe '%s/<\/p>\n<p>\s*ì/日/g'
+	try|sil exe '%s/<\/p>\n<p>\ *ì/日/g'
 	cat|endt
 	try|sil exe '%s/rǔ/乳/g'
 	cat|endt
@@ -753,8 +751,6 @@ function! NOPETW()
 	cat|endt
 	try|sil exe 'g/^更多精彩，/d'
 	cat|endt
-	try|sil exe 'sort /^\d\{-}{/'
-	cat|endt
 " 收尾
 	ec '收尾'
 	try|sil exe '%s/[{(\[【][}\])】]//g'
@@ -769,10 +765,12 @@ function! NOPETW()
 	cat|endt
 " 移除重複章節名稱
 	ec '移除重複章節名稱'
-	" try|sil exe '%!uniq'
-	" cat|endt
-	sil exe ':let i=1|g/^/s//\=i."{"/|let i+=1'
+	sil exe 'let i=1|g/^/s//\=i."{"/|let i+=1'
+	" 編號
+	sil exe 'sort /^\d\{-}{/'
+	" 排列
 	sil exe 'g/\%(^\d\{-}{第\1$\n\)\@<=\d\{-}{第\(.*\)$/d'
+	" sil exe '%!uniq'
 	sil exe 'sort n'
 	sil exe '%s/\d\{-}{//'
 	norm gg
