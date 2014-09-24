@@ -56,6 +56,8 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/搜索最新更新盡在[a-z]*//'
 	cat|endt
+	try|sil exe '%s/第二書包網（ShuBao2.com）好看的txt電子書/g'
+	cat|endt
 " 星號屏蔽字還原
 	ec '星號屏蔽字還原'
 	try|sil exe '%s/十有\*\{2\}/十有八九/g'

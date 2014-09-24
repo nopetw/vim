@@ -1,4 +1,7 @@
-" 2014年 2月18日 周二 16時11分27秒 CST
+" 2014年 9月25日 周四 00時30分06秒 CST
+" 樣式
+:colorscheme ir_black
+" :colorscheme railscasts
 " 編碼
 set encoding=utf-8
 set fileencodings=utf-8,big5,gb2312
@@ -51,6 +54,9 @@ au BufReadCmd   *.epub      call zip#Browse(expand("<amatch>"))
 au BufReadPre *.doc set ro
 au BufReadPre *.doc set hlsearch!
 au BufReadPost *.doc %!antiword "%"
+" Tab鍵格數
+autocmd FileType ruby,haml,eruby,yaml set ai sw=2 sts=2 et
+autocmd FileType python set sw=4 sts=4 et
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
@@ -102,5 +108,5 @@ filetype plugin indent on
 " vim-airline 設定
 " https://github.com/bling/vim-airline/wiki/Screenshots
 let g:airline_powerline_fonts = 1
-let g:airline_theme="laederon"
+let g:airline_theme="luna"
 " let g:airline_detect_whitespace=0
