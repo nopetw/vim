@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/nopetw/.vim/plugin'
-let g:netrw_dirhist_2='/Users/nopetw/Desktop/txt2epub'
-let g:netrw_dirhist_3='/Users/nopetw/Desktop/enexMakeFolder/Work'
-let g:netrw_dirhist_4='/Users/nopetw/Desktop/bak/epubZone/001'
-let g:netrw_dirhist_5='/usr/local'
-let g:netrw_dirhist_6='/Users/nopetw'
+let g:netrw_dirhist_cnt =0

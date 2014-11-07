@@ -90,19 +90,20 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " Bundle List
-Bundle 'FencView.vim'
-Bundle 'bash-support.vim'
-Bundle 'taglist.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'bling/vim-airline'
+" Bundle 'Lokaltog/powerline'
 " Bundle 'bling/vim-bufferline'
-Bundle 'kakkyz81/evervim'
+" Bundle 'tpope/vim-obsession'
+Bundle 'FencView.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'bash-support.vim'
+Bundle 'bling/vim-airline'
 Bundle 'gmarik/vundle'
+Bundle 'kakkyz81/evervim'
 Bundle 'majutsushi/tagbar'
 Bundle 'othree/eregex.vim'
+Bundle 'taglist.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
-" Bundle 'Lokaltog/powerline'
 
 filetype plugin indent on
 " vim-airline 設定
@@ -110,3 +111,11 @@ filetype plugin indent on
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
 " let g:airline_detect_whitespace=0
+" ## Piperita Theme ##
+" Theme by Jacob Tomlinson
+" https://github.com/killfall/terminal-piperita
+
+" Set syntax highlighting on
+syntax on
+
+" ## End Piperita Theme ##
