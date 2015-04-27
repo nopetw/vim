@@ -1,4 +1,4 @@
-" 2014年 9月25日 周四 00時30分06秒 CST
+" 2014年11月10日 周一 18時16分52秒 CST
 " 樣式
 :colorscheme ir_black
 " :colorscheme railscasts
@@ -8,8 +8,8 @@ set fileencodings=utf-8,big5,gb2312
 set ffs=unix,dos
 
 " 一般設定
-set autoindent		"自動縮排
-set smartindent		"自動處理縮排
+" set autoindent		"自動縮排
+" set smartindent		"自動處理縮排
 set smarttab		"對應expandtab
 set shiftwidth=4	"縮排寬度
 set tabstop=4		"<TAB>字元數
@@ -24,8 +24,13 @@ filetype plugin on	"enable plugin
 " http://vim.wikia.com/wiki/In_line_copy_and_paste_to_system_clipboard
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+
+" 配合reattach-to-user-namespace
+set clipboard=unnamed
+
 " disable
 " set expandtab		"把<TAB>變成空白鍵
+
 
 " 配色＆statusline
 set t_Co=256		"term顏色指定
@@ -92,7 +97,6 @@ call vundle#rc()
 " Bundle List
 " Bundle 'Lokaltog/powerline'
 " Bundle 'bling/vim-bufferline'
-" Bundle 'tpope/vim-obsession'
 Bundle 'FencView.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'bash-support.vim'
@@ -102,7 +106,9 @@ Bundle 'kakkyz81/evervim'
 Bundle 'majutsushi/tagbar'
 Bundle 'othree/eregex.vim'
 Bundle 'taglist.vim'
+Bundle 'tmux-plugins/vim-tmux'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
@@ -111,11 +117,9 @@ filetype plugin indent on
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
 " let g:airline_detect_whitespace=0
-" ## Piperita Theme ##
-" Theme by Jacob Tomlinson
-" https://github.com/killfall/terminal-piperita
 
-" Set syntax highlighting on
-syntax on
 
-" ## End Piperita Theme ##
+" evervim settings
+let g:evervim_devtoken='S=s89:U=8c7ee0:E=15451385f40:C=14cf9873128:P=1cd:A=en-devtoken:V=2:H=e4a1ac7216df3d2d113684d9a6e2391c'
+
+" vim-obsession
