@@ -55,6 +55,7 @@ endif
 
 " epub and vim
 au BufReadCmd   *.epub      call zip#Browse(expand("<amatch>"))
+au BufReadCmd   *.ipa      call zip#Browse(expand("<amatch>"))
 " MS Word document reading
 au BufReadPre *.doc set ro
 au BufReadPre *.doc set hlsearch!
@@ -101,10 +102,12 @@ Bundle 'FencView.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'bash-support.vim'
 Bundle 'bling/vim-airline'
+Bundle 'darfink/vim-plist'
 Bundle 'gmarik/vundle'
 Bundle 'kakkyz81/evervim'
 Bundle 'majutsushi/tagbar'
 Bundle 'othree/eregex.vim'
+Bundle 'ralesi/office.vim'
 Bundle 'taglist.vim'
 Bundle 'tmux-plugins/vim-tmux'
 Bundle 'tpope/vim-commentary'
