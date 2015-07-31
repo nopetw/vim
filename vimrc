@@ -13,7 +13,7 @@ set ffs=unix,dos
 set smarttab		"對應expandtab
 set shiftwidth=4	"縮排寬度
 set tabstop=4		"<TAB>字元數
-set history=500		"歷史記錄最高500行
+set history=5000	"歷史記錄最高500行
 set bs=2			"INSERT中，可過行刪除
 set nu				"左側顯示行數
 set incsearch		"快速顯示搜尋字串
