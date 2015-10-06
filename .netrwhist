@@ -1,2 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/nopetw/Desktop/tmp/tigcc 0.95 r1/tigcc_src/download/gcc.ti/config'
+let g:netrw_dirhist_2='/Users/nopetw/Desktop/tmp/tigcc 0.95 r1/tigcc_src/download/gcc.ti/conftest.dSYM'
+let g:netrw_dirhist_3='/Users/nopetw/Desktop/tigcc_src/tigcc_src_096/scripts'
