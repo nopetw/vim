@@ -15,7 +15,7 @@ set shiftwidth=4	"縮排寬度
 set tabstop=4		"<TAB>字元數
 set history=5000	"歷史記錄最高5000行
 set bs=2			"INSERT中，可過行刪除
-set nu				"左側顯示行數
+" set nu				"左側顯示行數
 set incsearch		"快速顯示搜尋字串
 syntax on			"語法上色
 filetype plugin on	"enable plugin
@@ -95,16 +95,16 @@ if !filereadable(vundle_readme)
 endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" Bundle List
 " Bundle 'Lokaltog/powerline'
 " Bundle 'bling/vim-bufferline'
+" Bundle 'kakkyz81/evervim'
 Bundle 'FencView.vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'bash-support.vim'
+Bundle 'Yggdroot/indentLine'
+" Bundle 'bash-support.vim'
 Bundle 'bling/vim-airline'
 Bundle 'darfink/vim-plist'
 Bundle 'gmarik/vundle'
-" Bundle 'kakkyz81/evervim'
 Bundle 'majutsushi/tagbar'
 Bundle 'othree/eregex.vim'
 Bundle 'ralesi/office.vim'
@@ -114,15 +114,21 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-surround'
 
+" Bundle List
+
 filetype plugin indent on
 " vim-airline 設定
 " https://github.com/bling/vim-airline/wiki/Screenshots
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
-" let g:airline_detect_whitespace=0
-
+let g:airline_detect_whitespace=0
 
 " evervim settings
 let g:evervim_devtoken='S=s89:U=8c7ee0:E=15451385f40:C=14cf9873128:P=1cd:A=en-devtoken:V=2:H=e4a1ac7216df3d2d113684d9a6e2391c'
 
 " vim-obsession
+
+" indentLine
+" set list listchars=tab:\│\ 
+set list listchars=tab:\¦\ 
+" set list listchars=tab:\┆\ 
