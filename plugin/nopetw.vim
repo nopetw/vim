@@ -3,7 +3,7 @@ command NOPETW exe ':sil call NOPETW()'
 \ | exe ':redr!'
 function! NOPETW()
 	ec '更改為UNIX格式'
-	sil exe 'set ff=unix'
+	" sil exe 'set ff=unix'
 	ec '移除首尾空白'
 	try|sil exe '%s/^M//g'
 	cat|endt

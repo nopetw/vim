@@ -1,23 +1,26 @@
 " 2014年11月10日 周一 18時16分52秒 CST
 " 樣式
-:colorscheme ir_black
+" :colorscheme ir_black
 " :colorscheme railscasts
 " 編碼
 set encoding=utf-8
-set fileencodings=utf-8,big5,gb2312
+set fileencodings=utf-8,big5,gb2312,big5-hkscs
 set ffs=unix,dos
 
 " 一般設定
 " set autoindent		"自動縮排
 " set smartindent		"自動處理縮排
-set smarttab		"對應expandtab
+" set smarttab		"對應expandtab
 set shiftwidth=4	"縮排寬度
 set tabstop=4		"<TAB>字元數
-set history=5000	"歷史記錄最高5000行
+set history=10000	"歷史記錄最高10000行
 set bs=2			"INSERT中，可過行刪除
-" set nu				"左側顯示行數
+set nu				"左側顯示行數
 set incsearch		"快速顯示搜尋字串
 syntax on			"語法上色
+set background=dark
+" colorscheme solarized
+
 filetype plugin on	"enable plugin
 
 " copy to clipboard in visul mode
@@ -96,13 +99,16 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " Bundle 'Lokaltog/powerline'
+" Bundle 'bash-support.vim'
+" Bundle 'bling/vim-airline'
 " Bundle 'bling/vim-bufferline'
-" Bundle 'kakkyz81/evervim'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'pi314/boshiamy.vim'
+" Bundle 'tpope/vim-commentary'
 Bundle 'FencView.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Yggdroot/indentLine'
-" Bundle 'bash-support.vim'
-Bundle 'bling/vim-airline'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'darfink/vim-plist'
 Bundle 'gmarik/vundle'
 Bundle 'majutsushi/tagbar'
@@ -110,13 +116,18 @@ Bundle 'othree/eregex.vim'
 Bundle 'ralesi/office.vim'
 Bundle 'taglist.vim'
 Bundle 'tmux-plugins/vim-tmux'
-Bundle 'tpope/vim-commentary'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/openscad.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
+" set statusline=%<%{boshiamy#status()}%f\ %h%m%r%=%y\ %-14.(%l,%c%V%)\ %P
 " Bundle List
 
 filetype plugin indent on
+:filetype plugin on
 " vim-airline 設定
 " https://github.com/bling/vim-airline/wiki/Screenshots
 let g:airline_powerline_fonts = 1
@@ -132,3 +143,9 @@ let g:evervim_devtoken='S=s89:U=8c7ee0:E=15451385f40:C=14cf9873128:P=1cd:A=en-de
 " set list listchars=tab:\│\ 
 set list listchars=tab:\¦\ 
 " set list listchars=tab:\┆\ 
+
+" openscad
+au! BufRead,BufNewFile *.scad	set filetype=openscad 
+
+" autocmd FileType yaml* :set noexpandtab
+" au FileType yaml noexpandtab
