@@ -32,7 +32,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/[nNｎＮ][eｅEＥ][tｔTＴ]/net/g'
 	cat|endt
-	try|sil exe '%s/[pPｐＰ][sSｓＳ][:：]/ps:/g'
+	try|sil exe '%s/[pPｐＰ][sSï½Ｓ][:：]/ps:/g'
 	cat|endt
 	try|sil exe '%s/[。\.]\{5,7\}/……/g'
 	cat|endt
@@ -112,7 +112,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/d[ìi]\ \{0,2\}d[ūu]/帝都/g'
 	cat|endt
-	try|sil exe '%s/di國/帝國/g'
+	try|sil exe '%s/di國/å¸國/g'
 	cat|endt
 	try|sil exe '%s/du\ \{0,2\}c[áa]i/獨裁/g'
 	cat|endt
@@ -238,7 +238,7 @@ function! NOPETW()
 	" cat|endt
 	" try|sil exe '%s/rén形/人形/g'
 	" cat|endt
-	try|sil exe '%s/sh[iì]ji[eè]/世界/g'
+	try|sil exe '%s/sh[iì]ji[eè]/ä¸界/g'
 	cat|endt
 	try|sil exe '%s/sh[ií]ji[aā]n/時間/g'
 	cat|endt
@@ -280,7 +280,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/w[ēe]ixi[ée]/威脅/g'
 	cat|endt
-	try|sil exe '%s/wèizh[ìi]/位置/g'
+	try|sil exe '%s/wèizh[Ã¬i]/位置/g'
 	cat|endt
 	try|sil exe '%s/wei員/委員/g'
 	cat|endt
@@ -416,7 +416,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/chu[áa]ng/床/g'
 	cat|endt
-	try|sil exe '%s/chún/唇/g'
+	try|sil exe '%s/chún/å/g'
 	cat|endt
 	try|sil exe '%s/ch[ūu]n/春/g'
 	cat|endt
@@ -468,7 +468,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/jiāng/江/g'
 	cat|endt
-	try|sil exe '%s/jiān/奸/g'
+	try|sil exe '%s/jiÄn/奸/g'
 	cat|endt
 	try|sil exe '%s/jiāo/交/g'
 	cat|endt
@@ -570,7 +570,7 @@ function! NOPETW()
 	cat|endt
 	try|sil exe '%s/sǎo/騷/g'
 	cat|endt
-	try|sil exe '%s/sè/色/g'
+	try|sil exe '%s/sÃ¨/色/g'
 	cat|endt
 	try|sil exe '%s/\([^a-z]\)se/\1色/g'
 	cat|endt
