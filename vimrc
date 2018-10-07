@@ -1,4 +1,3 @@
-" 2014年11月10日 周一 18時16分52秒 CST
 " 樣式
 " :colorscheme ir_black
 " :colorscheme railscasts
